@@ -1,1 +1,53 @@
-@forward './reset.scss'
+@forward './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html, body{
+  width: 100%;
+  height: 100%;
+  background-color: #dcdcdc;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+#app{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item{
+  display: block;
+
+  // background-color: rgb(195, 195, 195);
+  padding: 10px;
+
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  // border-radius: 10px;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 60px / $i;
+  }
+}

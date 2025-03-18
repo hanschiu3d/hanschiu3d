@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+a,
 html,
 body,
 div,
@@ -64,6 +65,8 @@ video {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: none;
+    text-decoration: none;
+    color: unset;
 }
 
 footer,

@@ -11,10 +11,13 @@ function recalculate_layout() {
   update_layout(app, layout[1])
 }
 
-recalculate_layout()
 
 window.addEventListener('resize', function () {
   recalculate_layout()
 })
 
+
+setInterval(() => {
+  recalculate_layout()
+}, 1);
 

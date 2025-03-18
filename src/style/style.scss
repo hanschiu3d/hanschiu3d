@@ -1,15 +1,16 @@
-@forward './reset.scss';
+@forward './reset';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 html, body{
   width: 100%;
   height: 100%;
-  background-color: #dcdcdc;
+  background-color: rgb(23, 23, 23);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1.5;
+  color: white;
 }
 
 #app{
@@ -35,14 +36,22 @@ html, body{
 }
 
 .item{
-  display: block;
-
-  // background-color: rgb(195, 195, 195);
+  display: flex;
+  background-color: #000000;
   padding: 10px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  // border-radius: 10px;
+  border-radius: 1.5px;
+  text-align: center;
+  flex-direction: column;
+
+  &::before, &::after{
+    display: block;
+    content: "";
+    flex-grow: 1;
+  }
+
 }
 
 @for $i from 1 through 6 {
@@ -50,3 +59,4 @@ html, body{
     font-size: calc(60px / $i);
   }
 }
+
